@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2017",
+    "sourceMap": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "noResolve": false,
+    "strict": false,
+    "suppressExcessPropertyErrors": true,
+    "lib": ["es2017", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "tslib": [
+        "node_modules/tslib/tslib.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "test/**/*.ts",
+    "test/**/*.tsx",
+    "test/e2e/*.ts"
+  ],
+  "types": [
+    "node",
+    "mocha",
+    "chai",
+    "webdriverio"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
