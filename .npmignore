@@ -4,3 +4,7 @@ polymer.json
 tsconfig.json
 node_modules/
 .idea/
+demo/
+gulp/
+gulpfile.js
+wdio.conf.js
