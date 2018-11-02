@@ -47,8 +47,9 @@ const innerStyle = html`
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
             padding: 4px 8px 4px 16px;
+            align-items: center;
+            border-bottom: 1px solid #e3e3e3;
          }
          
          p.title{
@@ -76,7 +77,7 @@ const innerStyle = html`
          
          #tile-content{
             padding: 16px;
-            overflow-y: auto;
+            overflow-y: hidden;
             height: -webkit-fill-available;
          }
          
