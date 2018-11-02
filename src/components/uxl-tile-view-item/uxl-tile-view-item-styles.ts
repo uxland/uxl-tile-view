@@ -4,7 +4,7 @@ const innerStyle = html`
     <style>
     
         :host{
-            max-height: calc(50vh - 64px);
+            max-height: calc(50vh - 34px);
             overflow-y: auto;
         }
         
@@ -47,14 +47,16 @@ const innerStyle = html`
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding-left: 16px;
             align-items: center;
+            padding: 4px 8px 4px 16px;
          }
          
          p.title{
-            color: #263238;       
+            color: #37464D;
             margin: 0;
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
          }
          
          #tile-actions{
@@ -73,7 +75,7 @@ const innerStyle = html`
          }
          
          #tile-content{
-            padding: 6px 16px 16px 16px;
+            padding: 16px;
             overflow-y: auto;
             height: -webkit-fill-available;
          }
