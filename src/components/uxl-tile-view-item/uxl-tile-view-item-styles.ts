@@ -2,7 +2,6 @@ import {html} from '@polymer/lit-element/lit-element';
 import {TemplateResult} from 'lit-html';
 const innerStyle = html`
     <style>
-    
         :host{
             max-height: calc(50vh - 34px);
             overflow-y: auto;
