@@ -3,7 +3,7 @@ import {TemplateResult} from 'lit-html';
 const innerStyle = html`
     <style>
         :host{
-            max-height: calc(50vh - 34px);
+            max-height: calc(50vh - 50px);
             overflow-y: auto;
         }
         
