@@ -75,9 +75,11 @@ const innerStyle = html`
          }
          
          #tile-content{
-            padding: 16px;
+            display: flex;
             overflow-y: hidden;
-            height: -webkit-fill-available;
+            min-height: 1px;
+            height: 100%;
+            box-sizing: border-box;
          }
          
          
