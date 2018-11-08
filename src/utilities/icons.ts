@@ -1,4 +1,4 @@
-import '@polymer/iron-icons';
+import '@polymer/iron-icons/iron-icons';
 import {html, TemplateResult} from 'lit-html';
 
 const icons = () => html`
