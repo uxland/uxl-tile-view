@@ -52,7 +52,7 @@ const innerStyle = html`
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 6px 8px 6px 16px;
+            padding: 4px 8px 4px 16px;
             align-items: center;
             border-bottom: 1px solid #e3e3e3;
          }
