@@ -15,10 +15,16 @@ const innerStyle = html`
     
         :host #btn-min{
             display: none;
+            width: 30px;
+            height: 30px;
+            padding: 6px;
         }
         
         :host #btn-max{
             display: flex;
+            width: 30px;
+            height: 30px;
+            padding: 6px;
         }
     
          :host(.maximized) #btn-max{
@@ -46,7 +52,7 @@ const innerStyle = html`
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 4px 8px 4px 16px;
+            padding: 6px 8px 6px 16px;
             align-items: center;
             border-bottom: 1px solid #e3e3e3;
          }
@@ -56,7 +62,7 @@ const innerStyle = html`
             margin: 0;
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 11px;
          }
          
          #tile-actions{
