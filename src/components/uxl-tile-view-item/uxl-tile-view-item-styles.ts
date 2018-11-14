@@ -52,9 +52,9 @@ const innerStyle = html`
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 4px 8px 4px 16px;
+            padding: 10px 16px;
             align-items: center;
-            border-bottom: 1px solid #e3e3e3;
+            border-bottom: 1px solid #cfd8dc;
          }
          
          p.title{
@@ -62,7 +62,7 @@ const innerStyle = html`
             margin: 0;
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 11px;
+            font-size: 12px;
          }
          
          #tile-actions{
@@ -72,7 +72,7 @@ const innerStyle = html`
          }
          
          paper-icon-button{
-            --iron-icon-fill-color: #4b555a;
+            --iron-icon-fill-color: #0288d1;
          }
 
          paper-icon-button:hover{
@@ -99,7 +99,7 @@ const innerStyle = html`
         }
 
         #tile-content::-webkit-scrollbar-thumb {
-            background-color: rgba(2, 136, 209, 0.65);
+            background-color: rgba(0,0,0,.07);
         }
          
     </style>
