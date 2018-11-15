@@ -41,6 +41,7 @@ const innerStyle = html`
          #tile-container{
             display: flex;
             flex-direction: column;
+            flex: 1;
          }
          
          #tile-header{
