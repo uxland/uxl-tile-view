@@ -10,16 +10,16 @@ const innerStyle = html`
     
         :host #btn-min{
             display: none;
-            width: 30px;
-            height: 30px;
-            padding: 6px;
+            width: 35px;
+            height: 35px;
+            padding: 8px;
         }
         
         :host #btn-max{
             display: flex;
-            width: 30px;
-            height: 30px;
-            padding: 6px;
+            width: 35px;
+            height: 35px;
+            padding: 8px;
         }
     
          :host(.maximized) #btn-max{
@@ -48,7 +48,7 @@ const innerStyle = html`
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 10px 16px;
+            padding: 8px 8px 8px 16px;
             align-items: center;
             border-bottom: 1px solid #cfd8dc;
          }
