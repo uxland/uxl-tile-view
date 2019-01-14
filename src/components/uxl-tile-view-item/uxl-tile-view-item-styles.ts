@@ -50,7 +50,6 @@ const innerStyle = html`
             justify-content: space-between;
             padding: 8px 8px 8px 16px;
             align-items: center;
-            border-bottom: 1px solid #cfd8dc;
          }
          
          p.title{
