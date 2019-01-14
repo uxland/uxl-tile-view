@@ -4,7 +4,6 @@ import {style as styleTemplate} from './uxl-tile-view-styles.js';
 import {template as htmlTemplate} from './uxl-tile-view-template.js';
 import * as animations from '../../utilities/animations';
 import { WidgetStatus} from "../../utilities/common";
-
 /**
  * `uxl-tile-view`
  * A tile view component
