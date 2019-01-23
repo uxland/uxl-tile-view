@@ -1,9 +1,10 @@
-import {listen, property} from "@uxland/uxl-polymer2-ts";
-import {html, LitElement} from '@polymer/lit-element/lit-element';
-import {style as styleTemplate} from './uxl-tile-view-styles.js';
-import {template as htmlTemplate} from './uxl-tile-view-template.js';
+import {html, LitElement} from 'lit-element/lit-element';
+import CSS from './uxl-tile-view-styles.js';
+import {template as TEMPLATE} from './uxl-tile-view-template.js';
 import * as animations from '../../utilities/animations';
 import { WidgetStatus} from "../../utilities/common";
+import {property, customElement} from 'lit-element/lib/decorators';
+import {listen} from '@uxland/uxl-polymer2-ts';
 /**
  * `uxl-tile-view`
  * A tile view component
@@ -12,12 +13,18 @@ import { WidgetStatus} from "../../utilities/common";
  * @polymer
  * @demo demo/index.html
  */
+@customElement('uxl-tile-view')
 export class UxlTileView extends LitElement {
+
+    connectedCallback(){
+        super.connectedCallback();
+        this.select();
+    }
 
     @property()
     selected: string;
 
-    @property({notify: true})
+    @property()
     attrForSelected: string;
 
     @property()
@@ -31,12 +38,7 @@ export class UxlTileView extends LitElement {
     }
 
     render(): any{
-        return html`${styleTemplate} ${htmlTemplate(this)}`;
-    }
-
-    connectedCallback(){
-        super.connectedCallback();
-        this.select();
+        return html`${CSS} ${TEMPLATE(this)}`;
     }
 
     get items(): HTMLCollection {
@@ -110,5 +112,3 @@ export class UxlTileView extends LitElement {
         this.select();
     }
 }
-
-window.customElements.define('uxl-tile-view', UxlTileView);

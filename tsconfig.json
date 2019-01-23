@@ -22,20 +22,6 @@
       ]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "test/**/*.ts",
-    "test/**/*.tsx",
-    "test/e2e/*.ts"
-  ],
-  "types": [
-    "node",
-    "mocha",
-    "chai",
-    "webdriverio"
-  ],
   "exclude": [
     "node_modules"
   ]

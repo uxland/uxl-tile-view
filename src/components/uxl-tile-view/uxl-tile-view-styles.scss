@@ -1,0 +1,20 @@
+:host > ::slotted(:not(slot)) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+:host > ::slotted(:not(slot).minimized) {
+  display: none !important;
+}
+
+:host > ::slotted(:not(slot).maximized) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+:host{
+  --uxl-tile-view-background-color: #fff;
+  --uxl-tile-view-title-color: #fff;
+}
