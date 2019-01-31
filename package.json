@@ -84,7 +84,7 @@
     "pretest:e2e": "rimraf allure-results",
     "test:e2e": "wdio",
     "test:generate-report": "allure generate allure-results --clean -o allure-report && allure open",
-    "posttest:e2e": "npm run test:generate-report",
+    "posttest:e2e": "npm run test:generate-report"
   },
   "publishConfig": {
     "access": "public"
