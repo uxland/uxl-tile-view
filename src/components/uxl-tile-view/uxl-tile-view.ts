@@ -1,10 +1,10 @@
 import {html, LitElement} from 'lit-element/lit-element';
-import CSS from './uxl-tile-view-styles.js';
-import {template as TEMPLATE} from './uxl-tile-view-template.js';
+import * as styles from './styles.scss';
+import {template} from './template';
 import * as animations from '../../utilities/animations';
 import { WidgetStatus} from "../../utilities/common";
 import {property, customElement} from 'lit-element/lib/decorators';
-import {listen} from '@uxland/uxl-polymer2-ts';
+import {listen} from '@uxland/uxl-utilities/listen';
 /**
  * `uxl-tile-view`
  * A tile view component
@@ -21,6 +21,10 @@ export class UxlTileView extends LitElement {
         this.select();
     }
 
+    render(): any{
+        return html`${styles} ${template()}`;
+    }
+
     @property()
     selected: string;
 
@@ -35,10 +39,6 @@ export class UxlTileView extends LitElement {
         let status : WidgetStatus = e.detail.status;
         let item = this.querySelector(`#${e.detail.tile}`);
         return status == "maximized" ? this.expand(item) : this.minimize(item);
-    }
-
-    render(): any{
-        return html`${CSS} ${TEMPLATE(this)}`;
     }
 
     get items(): HTMLCollection {

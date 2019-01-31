@@ -1,10 +1,9 @@
 import {html} from 'lit-element';
 import '@polymer/paper-icon-button/paper-icon-button';
-import {TemplateResult} from 'lit-html';
 import {iconTemplate} from '../../utilities/icons';
 import {UxlTileViewItem} from "./uxl-tile-view-item";
 
-const innerTemplate = (props: UxlTileViewItem) => html`
+export const template = (props: UxlTileViewItem) => html`
     ${iconTemplate()}
     <div id="tile-container">
         <div id="tile-header">
@@ -25,4 +24,3 @@ const innerTemplate = (props: UxlTileViewItem) => html`
         </div>
     </div>
 `;
-export const template: (props: any) => TemplateResult = innerTemplate;

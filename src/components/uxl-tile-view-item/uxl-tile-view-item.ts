@@ -1,7 +1,7 @@
 import {html, LitElement} from 'lit-element/lit-element';
 import {property, customElement} from "lit-element/lib/decorators";
-import CSS from './uxl-tile-view-item-styles.js';
-import {template as TEMPLATE} from './uxl-tile-view-item-template.js';
+import * as styles from './styles.scss';
+import {template} from './template';
 
 declare type TileStatus = "maximized" | "minimized" | "normal";
 
@@ -9,7 +9,7 @@ declare type TileStatus = "maximized" | "minimized" | "normal";
 export class UxlTileViewItem extends LitElement {
 
     render(): any {
-        return html`${CSS} ${TEMPLATE(this)}`;
+        return html`<custom-style><style>${styles}</style></custom-style> ${template(this)}`;
     }
 
     @property()

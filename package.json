@@ -19,10 +19,10 @@
   },
   "dependencies": {
     "@polymer/iron-icons": "^3.0.1",
-    "lit-element": "^2.0.0-rc.3",
     "@polymer/paper-icon-button": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
-    "@uxland/uxl-polymer2-ts": "^1.0.11"
+    "@uxland/uxl-utilities": "^2.0.3",
+    "lit-element": "^2.0.0-rc.5"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
@@ -46,7 +46,6 @@
     "ncp": "^2.0.0",
     "nsp": "^2.6.3",
     "raf": "^3.4.0",
-    "redux-mock-store": "git+https://github.com/dpinart/redux-mock-store.git",
     "require-dir": "^0.3.2",
     "rimraf": "^2.6.2",
     "run-sequence": "^2.1.0",
@@ -70,8 +69,7 @@
     "babel-register": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "common-js": "^0.3.8",
-    "tslib": "^1.9.3",
-    "wc-sass-render": "^1.1.1"
+    "tslib": "^1.9.3"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json || echo 'Skip common compile errors' ",
@@ -87,7 +85,6 @@
     "test:e2e": "wdio",
     "test:generate-report": "allure generate allure-results --clean -o allure-report && allure open",
     "posttest:e2e": "npm run test:generate-report",
-    "compile-sass": "sass-render ./src/**/[!^_]*.scss --suffix .ts -t src/utilities/sass-template.js && npm run build"
   },
   "publishConfig": {
     "access": "public"
