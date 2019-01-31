@@ -21,8 +21,8 @@ export class UxlTileView extends LitElement {
         this.select();
     }
 
-    render(): any{
-        return html`${styles} ${template()}`;
+    render(){
+        return html`<custom-style><style>${styles}</style></custom-style> ${template()}`;
     }
 
     @property()
