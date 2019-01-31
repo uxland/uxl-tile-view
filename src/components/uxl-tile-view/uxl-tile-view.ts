@@ -22,7 +22,7 @@ export class UxlTileView extends LitElement {
     }
 
     render(): any{
-        return html`${styles} ${template()}`;
+        return html`<custom-style><style>${styles}</style></custom-style> ${template()}`;
     }
 
     @property()
