@@ -17,6 +17,86 @@
     </script>
 </head>
 <body>
+<style>
+
+    p{
+        color: black;
+        font-size: 1rem;
+    }
+    h3{
+        color: #fff;
+        font-size: 1rem;
+    }
+    div{
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    #div0{
+        background-color: #4CAF50;
+        min-height: 100px;
+        min-width: 100px;
+    }
+    #div1{
+        background-color: #03A9F4;
+        min-height: 100px;
+        min-width: 100px;
+    }
+    #div2{
+        background-color: #F44336;
+        min-height: 100px;
+        min-width: 100px;
+    }
+</style>
 <script defer src="<%= htmlWebpackPlugin.options.paths.webcomponents %>"></script>
+
+<div id="test1">
+    <p>uxl-tile-view DEMO</p>
+    <uxl-tile-view id="tile" attrForSelected="name" selected="view1">
+        <uxl-tile-view-item name="view1" id="div0" itemId="div0">
+            <div slot="header">
+                <p>I'm a header view1</p>
+            </div>
+            <div slot="content">
+                <p>I'm a normal state content view1</p>
+            </div>
+            <div slot="maximized-content">
+                <p>I'm a maximized content view1</p>
+            </div>
+            <div slot="minimized-content">
+                <p>I'm a minimized content view1</p>
+            </div>
+        </uxl-tile-view-item>
+        <uxl-tile-view-item name="view2" id="div1" itemId="div1">
+            <div slot="header">
+                <h3>I'm a header view2</h3>
+            </div>
+            <div slot="content">
+                <p>I'm a normal state content view1</p>
+            </div>
+            <div slot="maximized-content">
+                <p>I'm a maximized content view1</p>
+            </div>
+            <div slot="minimized-content">
+                <p>I'm a minimized content view1</p>
+            </div>
+        </uxl-tile-view-item>
+        <uxl-tile-view-item name="view3" id="div2" itemId="div2">
+            <div slot="header">
+                <h3>I'm a header view3</h3>
+            </div>
+            <div slot="content">
+                <p>I'm a normal state content view1</p>
+            </div>
+            <div slot="maximized-content">
+                <p>I'm a maximized content view1</p>
+            </div>
+            <div slot="minimized-content">
+                <p>I'm a minimized content view1</p>
+            </div>
+        </uxl-tile-view-item>
+    </uxl-tile-view>
+</div>
+
 </body>
 </html>
