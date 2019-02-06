@@ -5,9 +5,8 @@ tsconfig.json
 node_modules/
 .idea/
 demo/
-gulp/
-gulpfile.js
 wdio.conf.js
 webpack.config.js
 .travis.yml
 README.md
+src/
