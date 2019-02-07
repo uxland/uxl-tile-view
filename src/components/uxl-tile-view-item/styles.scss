@@ -1,3 +1,11 @@
+:host{
+  --uxl-tile-view-item-background-color: white;
+  --uxl-tile-view-item-border-radius: 0;
+  --uxl-tile-view-item-box-shadow: none;
+  --uxl-tile-view-item-border: 1px solid #000;
+  --uxl-tile-view-item-max-background-color: white;
+}
+
 :host(.maximized){
   max-height: initial;
   margin: 0!important;
@@ -34,10 +42,19 @@
   display: flex;
 }
 
+:host(.maximized) #tile-container {
+  background-color: var(--uxl-tile-view-item-max-background-color, white);
+  border: none;
+}
+
 #tile-container{
   display: flex;
   flex-direction: column;
   flex: 1;
+  background-color: var(--uxl-tile-view-item-background-color, white);
+  border-radius: var(--uxl-tile-view-item-border-radius, 0);
+  box-shadow: var(--uxl-tile-view-item-box-shadow, none);
+  border: var(--uxl-tile-view-item-box-border, #{1px solid black});
 }
 
 #tile-header{
