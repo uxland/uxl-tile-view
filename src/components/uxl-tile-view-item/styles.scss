@@ -46,7 +46,7 @@
   background-color: var(--uxl-tile-view-item-background-color, white);
   border-radius: var(--uxl-tile-view-item-border-radius, 0);
   box-shadow: var(--uxl-tile-view-item-box-shadow, none);
-  border: var(--uxl-tile-view-item-box-border, #{1px solid black});
+  border: var(--uxl-tile-view-item-border, #{1px solid black});
 }
 
 #tile-header{
