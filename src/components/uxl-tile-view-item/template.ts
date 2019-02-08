@@ -15,8 +15,8 @@ export const template = (props: UxlTileViewItem) => html`
             ? html `<slot name="maximized-header"></slot>`
             : html ``}
             <div id="tile-actions">
-                <paper-icon-button @click="${props._maximize}" id="btn-max" data-args="${props.itemId}" icon="tile-view-icons:maximize"></paper-icon-button>
-                <paper-icon-button @click="${props._minimize}" id="btn-min" data-args="${props.itemId}" icon="tile-view-icons:minimize"></paper-icon-button>
+                <paper-icon-button @click="${props._maximize}" id="btn-max" data-args="${props.itemId}" icon="${props.iconMax}"></paper-icon-button>
+                <paper-icon-button @click="${props._minimize}" id="btn-min" data-args="${props.itemId}" icon="${props.iconMin}"></paper-icon-button>
             </div>
         </div>
         <div id="tile-content">
