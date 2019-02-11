@@ -39,14 +39,17 @@
   border: none;
 }
 
-#tile-container{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+:host(:not(.maximized)) #tile-container {
   background-color: var(--uxl-tile-view-item-background-color, white);
   border-radius: var(--uxl-tile-view-item-border-radius, 0);
   box-shadow: var(--uxl-tile-view-item-box-shadow, none);
   border: var(--uxl-tile-view-item-border, #{1px solid black});
+}
+
+#tile-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 #tile-header{
