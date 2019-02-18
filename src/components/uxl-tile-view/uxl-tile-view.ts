@@ -5,6 +5,7 @@ import * as animations from '../../utilities/animations';
 import { WidgetStatus} from "../../utilities/common";
 import {property, customElement} from 'lit-element/lib/decorators';
 import {listen} from '@uxland/uxl-utilities/listen';
+import {UxlTileViewItem} from "../uxl-tile-view-item/uxl-tile-view-item";
 /**
  * `uxl-tile-view`
  * A tile view component
@@ -19,6 +20,23 @@ export class UxlTileView extends LitElement {
     connectedCallback(){
         super.connectedCallback();
         this.select();
+        this.setIcons();
+    }
+
+    @property()
+    iconMax: string = 'tile-view-icons:maximize';
+
+    @property()
+    iconMin: string = 'tile-view-icons:minimize';
+
+    setIcons() {
+        if(this.items) {
+            let items = Array.from(this.items);
+            items.forEach((i: UxlTileViewItem)=> {
+                i.iconMax = this.iconMax;
+                i.iconMin = this.iconMin;
+            })
+        }
     }
 
     render(){
