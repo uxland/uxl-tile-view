@@ -49,10 +49,11 @@ The following custom properties and mixins are available for styling:
 
 | Custom property | Description | Default |
 | --- | --- | --- |
-| `--uxl-tile-view-background-color` | The background color of the tile view item | `white` |
-| `--uxl-tile-view-padding` | The background color of the tile view item | `white` |
-| `--uxl-tile-view-max-padding` | The background color of the tile view item | `white` |
-| `--uxl-tile-view-item-header-background-color` | The background color of the tile view item | `white` |
+| `--uxl-tile-view-background-color` | The background color of the tile view minimized | `white` |
+| `--uxl-tile-view-max-background-color` | The background color of the tile view maximized | `white` |
+| `--uxl-tile-view-padding` | The padding of the tile view minimized | `0` |
+| `--uxl-tile-view-max-padding` | The padding of the tile view maximized | `0` |
+| `--uxl-tile-view-item-header-background-color` | The background color of the header tile view item | `white` |
 | `--uxl-tile-view-item-background-color` | The background color of the tile view item | `white` |
 | `--uxl-tile-view-item-border-radius` | The border radius of the tile view item | `0px` |
 | `--uxl-tile-view-item-box-shadow` | The box shadow of the tile view item | `none` |
