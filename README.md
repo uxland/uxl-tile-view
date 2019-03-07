@@ -28,14 +28,34 @@ When you minimize the maximized tile, automatically reverse the situation, being
 
 The component switch into maximized and normal slots automatically when the item is maximized.
 
+### Content attributes
+
+Attribute | Description         | Default
+----------|---------------------|----------------------------------------
+`iconMin` | Icon element when the tiles is minimized | minimize ( from MD SVG icon 'add_circle_outline') | 
+`iconMax` | Icon element when the tile is maximized | maximize ( from MD SVG icon 'clear') | 
+
+```
+<uxl-tile-view iconMin="icon-name" iconMax="icon-name">
+    <uxl-tile-view-item name="view1"></uxl-tile-view-item>
+    <uxl-tile-view-item name="view2"></uxl-tile-view-item>
+    <uxl-tile-view-item name="view3"></uxl-tile-view-item>
+</uxl-tile-view>
+```
+
 ### Styling
 
 The following custom properties and mixins are available for styling:
 
 | Custom property | Description | Default |
 | --- | --- | --- |
+| `--uxl-tile-view-background-color` | The background color of the tile view item | `white` |
+| `--uxl-tile-view-padding` | The background color of the tile view item | `white` |
+| `--uxl-tile-view-max-padding` | The background color of the tile view item | `white` |
+| `--uxl-tile-view-item-header-background-color` | The background color of the tile view item | `white` |
 | `--uxl-tile-view-item-background-color` | The background color of the tile view item | `white` |
 | `--uxl-tile-view-item-border-radius` | The border radius of the tile view item | `0px` |
 | `--uxl-tile-view-item-box-shadow` | The box shadow of the tile view item | `none` |
 | `--uxl-tile-view-item-border` | The border of the tile view item | `'1px solid black'` |
+| `--uxl-tile-view-item-icon-color` | The border of the tile view item | `'1px solid black'` |
 | `--uxl-tile-view-item-max-background-color` | The background color of maximized the tile view item | `white` |

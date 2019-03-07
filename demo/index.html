@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>UXL Tile View</title>
     <script src="/demo/settings.js"></script>
+    <link rel="stylesheet" type="text/css" href="/demo/styles2.css">
     <script>
         document.addEventListener('WebComponentsReady', function componentsReady() {
             document.removeEventListener('WebComponentsReady', componentsReady, false);
@@ -20,6 +21,7 @@
 
     html {
         margin: 32px;
+
     }
 
     p {
@@ -35,7 +37,10 @@
     }
 
     uxl-tile-view {
-        --uxl-tile-view-background-color: red;
+        --uxl-tile-view-background-color: grey;
+        --uxl-tile-view-max-background-color: blue;
+        --uxl-tile-view-padding: 50px;
+        --uxl-tile-view-max-padding: 100px;
     }
 
     uxl-tile-view-item {
@@ -44,6 +49,8 @@
         --uxl-tile-view-item-box-shadow: none;
         --uxl-tile-view-item-border: 1px solid #999;
         --uxl-tile-view-item-max-background-color: #f5f5f5;
+        --uxl-tile-view-item-icon-color: blue;
+        --uxl-tile-view-item-header-background-color: #e5e5e5;
         min-height: 100px;
         min-width: 100px;
         margin-bottom: 16px;

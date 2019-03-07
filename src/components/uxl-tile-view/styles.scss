@@ -14,7 +14,18 @@
   flex: 1;
 }
 
-:host{
-  --uxl-tile-view-background-color: #fff;
-  --uxl-tile-view-title-color: #fff;
+:host {
+  display: flex;
+  background-color: var(--uxl-tile-view-background-color, white);
+  padding: var(--uxl-tile-view-padding, 0);
+}
+
+:host(.some-minimized) {
+  padding: var(--uxl-tile-view-padding, 0);
+  background-color: var(--uxl-tile-view-background-color, white);
+}
+
+:host(.some-maximized) {
+  background-color: var(--uxl-tile-view-max-background-color, white);
+  padding: var(--uxl-tile-view-max-padding, 0);
 }

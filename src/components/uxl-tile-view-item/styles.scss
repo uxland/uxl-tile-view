@@ -58,6 +58,7 @@
   justify-content: space-between;
   padding: 8px 6px 8px 16px;
   align-items: center;
+  background-color: var(--uxl-tile-view-item-header-background-color, white);
 }
 
 p.title{
@@ -75,7 +76,7 @@ p.title{
 }
 
 paper-icon-button{
-  --iron-icon-fill-color: #0288d1;
+  --iron-icon-fill-color: var(--uxl-tile-view-item-icon-color, #000000);
 }
 
 paper-icon-button:hover{
