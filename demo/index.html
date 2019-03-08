@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>UXL Tile View</title>
     <script src="/demo/settings.js"></script>
-    <link rel="stylesheet" type="text/css" href="/demo/styles2.css">
+    <link rel="stylesheet" type="text/css" href="/demo/styles.scss">
     <script>
         document.addEventListener('WebComponentsReady', function componentsReady() {
             document.removeEventListener('WebComponentsReady', componentsReady, false);
@@ -41,6 +41,10 @@
         --uxl-tile-view-max-background-color: blue;
         --uxl-tile-view-padding: 50px;
         --uxl-tile-view-max-padding: 100px;
+    }
+
+    uxl-tile-view-item h3 {
+        color: red !important;
     }
 
     uxl-tile-view-item {

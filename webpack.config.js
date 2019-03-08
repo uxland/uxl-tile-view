@@ -121,6 +121,7 @@ module.exports = {
                 test: /\.scss$/,
                 include: [
                     join(__dirname, 'src/components'),
+                    join(__dirname, 'demo/styles')
                 ],
                 use: [
                     {
