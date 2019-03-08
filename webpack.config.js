@@ -119,10 +119,6 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                include: [
-                    join(__dirname, 'src/components'),
-                    join(__dirname, 'demo/styles')
-                ],
                 use: [
                     {
                         loader: 'to-string-loader',
@@ -145,25 +141,6 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             sourceMap: true,
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                        options: {
-                            insertAt: 'bottom',
-                            sourceMap: true,
-                            convertToAbsoluteUrls: true
-                        }
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
                         }
                     }
                 ]
