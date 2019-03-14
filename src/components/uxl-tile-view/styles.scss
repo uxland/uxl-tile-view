@@ -1,3 +1,14 @@
+$prova: red;
+$uxl-tile-view-max-background-color: orange;
+
+$map: (
+        background-color: $uxl-tile-view-max-background-color,
+);
+
+
+
+
+
 :host > ::slotted(:not(slot)) {
   display: flex;
   flex-direction: column;
@@ -26,6 +37,7 @@
 }
 
 :host(.some-maximized) {
-  background-color: var(--uxl-tile-view-max-background-color, white);
+  /*background-color: var(--uxl-tile-view-max-background-color, white);*/
   padding: var(--uxl-tile-view-max-padding, 0);
+  background-color: $prova;
 }

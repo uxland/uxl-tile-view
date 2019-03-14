@@ -55,6 +55,7 @@ The following custom properties and mixins are available for styling:
 | `--uxl-tile-view-max-padding` | The padding of the tile view maximized | `0` |
 | `--uxl-tile-view-item-header-background-color` | The background color of the header tile view item | `white` |
 | `--uxl-tile-view-item-background-color` | The background color of the tile view item | `white` |
+| `--uxl-tile-view-item-padding` | The padding of the tile view item | `16px` |
 | `--uxl-tile-view-item-border-radius` | The border radius of the tile view item | `0px` |
 | `--uxl-tile-view-item-box-shadow` | The box shadow of the tile view item | `none` |
 | `--uxl-tile-view-item-border` | The border of the tile view item | `'1px solid black'` |

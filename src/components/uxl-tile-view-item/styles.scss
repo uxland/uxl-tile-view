@@ -90,7 +90,7 @@ paper-icon-button:hover{
   min-height: 1px;
   height: 100%;
   box-sizing: border-box;
-  padding: 16px;
+  padding: var(--uxl-tile-view-item-padding, 16px);
 }
 
 
