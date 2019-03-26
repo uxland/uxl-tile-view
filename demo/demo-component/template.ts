@@ -4,7 +4,7 @@ import "src/components/uxl-tile-view-item/uxl-tile-view-item";
 
 export const template = () => html`
 <h3>uxl-tile-view DEMO</h3>
-<uxl-tile-view id="tile" attrForSelected="name" iconMax="tile-view-icons:maximize">
+<uxl-tile-view id="tile" attrForSelected="name" iconMax="tile-view-icons:minimize">
     <uxl-tile-view-item name="view1" id="div0" itemId="div0" iconMax="tile-view-icons:maximize">
         <div slot="header">
             <h3>I'm a header view1</h3>
