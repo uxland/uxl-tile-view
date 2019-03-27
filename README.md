@@ -53,7 +53,7 @@ The following custom properties and mixins are available for styling:
 | `--uxl-tile-view-max-background-color` | The background color of the tile view maximized | `white` |
 | `--uxl-tile-view-padding` | The padding of the tile view minimized | `0` |
 | `--uxl-tile-view-max-padding` | The padding of the tile view maximized | `0` |
-| `--uxl-tile-view-item-title-color` | The color of the title tile | `black` |
+| `--uxl-tile-view-item-title-color` | The color of the title tile item | `black` |
 | `--uxl-tile-view-item-header-background-color` | The background color of the header tile view item | `white` |
 | `--uxl-tile-view-item-background-color` | The background color of the tile view item | `white` |
 | `--uxl-tile-view-item-padding` | The padding of the tile view item | `16px` |
