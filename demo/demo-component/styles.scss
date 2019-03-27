@@ -17,6 +17,10 @@ div {
   font-size: 2rem;
 }
 
+p.title {
+  background-color: red;
+}
+
 uxl-tile-view {
   --uxl-tile-view-background-color: grey;
   --uxl-tile-view-max-background-color: blue;

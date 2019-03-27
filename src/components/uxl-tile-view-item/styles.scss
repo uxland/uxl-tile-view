@@ -69,6 +69,7 @@
 }
 
 p.title{
+  color: var(--uxl-tile-view-item-title-color, black);
   margin: 0;
   font-weight: 600;
   text-transform: uppercase;
