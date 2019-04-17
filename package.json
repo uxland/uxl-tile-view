@@ -78,6 +78,7 @@
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release",
     "polymer:serve": "polymer serve",
+    "test": "echo \"Warning: no test specified\" && exit 0",
     "serve": "webpack-dev-server --hot --inline --progress"
   },
   "publishConfig": {
