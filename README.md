@@ -62,5 +62,5 @@ The following custom properties and mixins are available for styling:
 | `--uxl-tile-view-item-border` | The border of the tile view item | `'1px solid black'` |
 | `--uxl-tile-view-item-icon-color` | The icon color | `'#000000'` |
 | `--uxl-tile-view-item-icon-size` | The icon height and width size | `'35px'` |
-| `--uxl-tile-view-item-icon-padding` | The icon padding | `'35px'` |
+| `--uxl-tile-view-item-icon-padding` | The icon padding | `'8px'` |
 | `--uxl-tile-view-item-max-background-color` | The background color of maximized the tile view item | `white` |
