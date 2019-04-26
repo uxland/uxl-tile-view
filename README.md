@@ -65,3 +65,4 @@ The following custom properties and mixins are available for styling:
 | `--uxl-tile-view-item-icon-padding` | The icon padding | `'8px'` |
 | `--uxl-tile-view-item-max-background-color` | The background color of maximized the tile view item | `white` |
 | `--uxl-tile-view-item-header-padding` | The padding of tile header| `8px 6px 8px 16px` |
+| `---uxl-tile-view-item-header-border-bottom,` | The border bottom of tile header | `none` |

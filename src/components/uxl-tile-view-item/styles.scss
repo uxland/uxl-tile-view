@@ -65,7 +65,7 @@
   border-top-right-radius: var(--uxl-tile-view-item-border-radius, 0);
   border-top: var(--uxl-tile-view-item-border, #{1px solid black});
   border-right: var(--uxl-tile-view-item-border, #{1px solid black});
-  border-bottom: 0;
+  border-bottom: var(--uxl-tile-view-item-header-border-bottom, none);
   border-left: var(--uxl-tile-view-item-border, #{1px solid black});
 }
 
