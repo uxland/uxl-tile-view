@@ -48,13 +48,14 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  border-radius: var(--uxl-tile-view-item-border-radius, 0);
 }
 
 #tile-header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 8px 6px 8px 16px;
+  padding: var(--uxl-tile-view-item-header-padding, 8px 6px 8px 16px);
   align-items: center;
   background-color: var(--uxl-tile-view-item-header-background-color, white);
 }
