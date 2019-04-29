@@ -28,6 +28,8 @@ When you minimize the maximized tile, automatically reverse the situation, being
 
 The component switch into maximized and normal slots automatically when the item is maximized.
 
+We have 2 states: passing a ```title``` or ```maximizedTitle```, or passaing ```header``` or ```maximizedHeader```
+
 ### Content attributes
 
 Attribute | Description         | Default
