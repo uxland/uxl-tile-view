@@ -24,7 +24,7 @@ export const template = (props: UxlTileViewItem) => html`
       </div>
     </div>
     <div id="tile-content">
-      ${getContentTemplate(props)};
+      ${getContentTemplate(props)}
     </div>
   </div>
 `;
