@@ -38,7 +38,7 @@ const getHeaderTemplate = (props: UxlTileViewItem) => html`
       : html`
           <slot name="header"></slot>
         `
-    : props.title
+    : props.maximizedTitle
     ? html`
         <p class="title">${props.maximizedTitle}</p>
       `
