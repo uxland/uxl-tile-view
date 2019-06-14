@@ -1,5 +1,7 @@
 export interface IStylesScss {
-  'title': string;
+  'flex-tile': string;
+  'grid-tile': string;
+  'some-maximized': string;
 }
 
 export const locals: IStylesScss;

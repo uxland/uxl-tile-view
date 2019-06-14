@@ -1,18 +1,21 @@
-$prova: red;
-$uxl-tile-view-max-background-color: orange;
+@import "@uxland/uxl-style-utilities/src/flex-layout-styles.scss";
+@import "@uxland/uxl-style-utilities/src/uxl-units-styles.scss";
 
-$map: (
-        background-color: $uxl-tile-view-max-background-color,
-);
+:host, :host(.none-maximized) {
+  display: var(--uxl-tile-view-display, #{flex});
+  background-color: var(--uxl-tile-view-background-color, white);
+  padding: var(--uxl-tile-view-padding, 0);
+}
 
-
-
-
+:host(.some-maximized) {
+  display: var(--uxl-tile-view-max-display, #{flex});
+  padding: var(--uxl-tile-view-max-padding, 0);
+  background-color: var(--uxl-tile-view-max-background-color, white);
+}
 
 :host > ::slotted(:not(slot)) {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  @include layout-flex;
+  @include layout-vertical;
 }
 
 :host > ::slotted(:not(slot).minimized) {
@@ -20,23 +23,6 @@ $map: (
 }
 
 :host > ::slotted(:not(slot).maximized) {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-:host {
-  display: flex;
-  background-color: var(--uxl-tile-view-background-color, white);
-  padding: var(--uxl-tile-view-padding, 0);
-}
-
-:host(.some-minimized) {
-  padding: var(--uxl-tile-view-padding, 0);
-  background-color: var(--uxl-tile-view-background-color, white);
-}
-
-:host(.some-maximized) {
-  padding: var(--uxl-tile-view-max-padding, 0);
-  background-color: var(--uxl-tile-view-max-background-color, white);
+  @include layout-flex;
+  @include layout-vertical;
 }

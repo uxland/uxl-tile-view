@@ -26,6 +26,7 @@
     "@polymer/iron-icons": "^3.0.1",
     "@polymer/paper-icon-button": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
+    "@uxland/uxl-style-utilities": "^1.0.10",
     "@uxland/uxl-utilities": "^2.0.3",
     "lit-element": "^2.0.1"
   },

@@ -87,7 +87,7 @@ slot[name="header"]::slotted(*) {
 }
 
 paper-icon-button{
-  --iron-icon-fill-color: var(--uxl-tile-view-item-icon-color, #000000);
+  --iron-icon-fill-color: var(--uxl-tile-view-item-icon-color, black);
 }
 
 paper-icon-button:hover{

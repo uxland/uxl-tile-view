@@ -1,4 +1,4 @@
-import {html, LitElement} from 'lit-element/lit-element';
+import {html, LitElement, unsafeCSS, css} from 'lit-element/lit-element';
 import {property, customElement} from "lit-element/lib/decorators";
 import * as styles from './styles.scss';
 import {template} from './template';
@@ -9,7 +9,11 @@ declare type TileStatus = "maximized" | "minimized" | "normal";
 export class UxlTileViewItem extends LitElement {
 
     render(): any {
-        return html`<custom-style><style>${styles}</style></custom-style> ${template(this)}`;
+        return html`${template(this)}`;
+    }
+
+    static get styles() {
+        return css`${unsafeCSS(styles)}`;
     }
 
     @property()

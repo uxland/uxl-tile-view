@@ -1,8 +1,5 @@
-$prova: #CCC000;
-
 html {
   margin: 32px;
-
 }
 
 p {
@@ -18,23 +15,45 @@ div {
 }
 
 
-uxl-tile-view {
+uxl-tile-view#flex-tile {
   --uxl-tile-view-background-color: grey;
   --uxl-tile-view-max-background-color: blue;
   --uxl-tile-view-padding: 50px;
   --uxl-tile-view-max-padding: 100px;
+
+  uxl-tile-view-item {
+    --uxl-tile-view-item-background-color: #eeeeee;
+    --uxl-tile-view-item-border-radius: 4px;
+    --uxl-tile-view-item-box-shadow: none;
+    --uxl-tile-view-item-border: 1px solid #999;
+    --uxl-tile-view-item-max-background-color: #f5f5f5;
+    --uxl-tile-view-item-title-color: #CCC000;
+    --uxl-tile-view-item-icon-color: red;
+    --uxl-tile-view-item-header-background-color: #e5e5e5;
+    min-height: 100px;
+    min-width: 100px;
+    margin-bottom: 16px;
+  }
 }
 
-uxl-tile-view-item {
-  --uxl-tile-view-item-background-color: #eeeeee;
-  --uxl-tile-view-item-border-radius: 4px;
-  --uxl-tile-view-item-box-shadow: none;
-  --uxl-tile-view-item-border: 1px solid #999;
-  --uxl-tile-view-item-max-background-color: #f5f5f5;
-  --uxl-tile-view-item-title-color: #CCC000;
-  --uxl-tile-view-item-icon-color: red;
-  --uxl-tile-view-item-header-background-color: #e5e5e5;
-  min-height: 100px;
-  min-width: 100px;
-  margin-bottom: 16px;
+uxl-tile-view#grid-tile {
+  --uxl-tile-view-background-color: #eceff1;
+  --uxl-tile-view-max-background-color: #cfd8dc;
+  --uxl-tile-view-display: grid;
+  --uxl-tile-view-max-display: flex;
+  padding: 24px;
+
+  &:not(.some-maximized) {
+    grid-template-columns: repeat(auto-fill, minmax(525px, 1fr));
+    grid-auto-rows: minmax(220px, 1fr);
+    gap: 20px 20px;
+  }
+
+  uxl-tile-view-item {
+    &::part(tile-container) {
+      color: red;
+    }
+  }
+
 }
+

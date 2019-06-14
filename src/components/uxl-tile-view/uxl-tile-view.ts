@@ -1,4 +1,4 @@
-import {html, LitElement} from 'lit-element/lit-element';
+import {html, LitElement, unsafeCSS, css} from 'lit-element/lit-element';
 import * as styles from './styles.scss';
 import {template} from './template';
 import * as animations from '../../utilities/animations';
@@ -29,6 +29,9 @@ export class UxlTileView extends LitElement {
     @property()
     iconMin: string = 'tile-view-icons:minimize';
 
+    @property()
+    iconTitle: string = 'tile-view-icons:minimize';
+
     setIcons() {
         if(this.items) {
             let items = Array.from(this.items);
@@ -40,7 +43,11 @@ export class UxlTileView extends LitElement {
     }
 
     render(){
-        return html`<custom-style><style>${styles}</style></custom-style> ${template()}`;
+        return html`${template()}`;
+    }
+
+    static get styles() {
+        return css`${unsafeCSS(styles)}`;
     }
 
     @property()
