@@ -3,6 +3,7 @@
 
 :host, :host(.none-maximized) {
   display: var(--uxl-tile-view-display, #{flex});
+  flex-wrap: wrap;
   background-color: var(--uxl-tile-view-background-color, white);
   padding: var(--uxl-tile-view-padding, 0);
 }
