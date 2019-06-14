@@ -28,6 +28,8 @@ When you minimize the maximized tile, automatically reverse the situation, being
 
 The component switch into maximized and normal slots automatically when the item is maximized.
 
+We have 2 states: passing a ```title``` or ```maximizedTitle```, or passaing ```header``` or ```maximizedHeader```
+
 #### Content attributes
 
 Attribute | Description         | Default
@@ -57,7 +59,6 @@ The following styleable part's of the element `confirm-component` are available 
 #####Mixins
 The following custom properties and mixins are available for styling:
 
-
 | Custom property | Description | Default |
 | --- | --- | --- |
 | `--uxl-tile-view-display` | The display of the tile view minimized | `flex` |
@@ -72,7 +73,10 @@ The following custom properties and mixins are available for styling:
 | `--uxl-tile-view-item-padding` | The padding of the tile view item | `16px` |
 | `--uxl-tile-view-item-border-radius` | The border radius of the tile view item | `0px` |
 | `--uxl-tile-view-item-box-shadow` | The box shadow of the tile view item | `none` |
-| `--uxl-tile-view-item-border` | The border of the tile view item | `1px solid black` |
-| `--uxl-tile-view-item-icon-color` | The icon color | `black` |
-| `--uxl-tile-view-item-icon-size` | The icon height and width size | `35px` |
+| `--uxl-tile-view-item-border` | The border of the tile view item | `'1px solid black'` |
+| `--uxl-tile-view-item-icon-color` | The icon color | `'#000000'` |
+| `--uxl-tile-view-item-icon-size` | The icon height and width size | `'35px'` |
+| `--uxl-tile-view-item-icon-padding` | The icon padding | `'8px'` |
 | `--uxl-tile-view-item-max-background-color` | The background color of maximized the tile view item | `white` |
+| `--uxl-tile-view-item-header-padding` | The padding of tile header| `8px 6px 8px 16px` |
+| `---uxl-tile-view-item-header-border-bottom,` | The border bottom of tile header | `none` |

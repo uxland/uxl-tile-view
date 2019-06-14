@@ -8,14 +8,14 @@
   display: none;
   width: var(--uxl-tile-view-item-icon-size, 35px);
   height: var(--uxl-tile-view-item-icon-size, 35px);
-  padding: 8px;
+  padding: var(--uxl-tile-view-item-icon-padding, 8px);
 }
 
 :host #btn-max{
   display: flex;
   width: var(--uxl-tile-view-item-icon-size, 35px);
   height: var(--uxl-tile-view-item-icon-size, 35px);
-  padding: 8px;
+  padding: var(--uxl-tile-view-item-icon-padding, 8px);
 }
 
 :host(.maximized) #btn-max{
@@ -48,13 +48,14 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  border-radius: var(--uxl-tile-view-item-border-radius, 0);
 }
 
 #tile-header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 8px 6px 8px 16px;
+  padding: var(--uxl-tile-view-item-header-padding, 8px 6px 8px 16px);
   align-items: center;
   background-color: var(--uxl-tile-view-item-header-background-color, white);
 }
@@ -64,7 +65,7 @@
   border-top-right-radius: var(--uxl-tile-view-item-border-radius, 0);
   border-top: var(--uxl-tile-view-item-border, #{1px solid black});
   border-right: var(--uxl-tile-view-item-border, #{1px solid black});
-  border-bottom: 0;
+  border-bottom: var(--uxl-tile-view-item-header-border-bottom, none);
   border-left: var(--uxl-tile-view-item-border, #{1px solid black});
 }
 
@@ -97,6 +98,7 @@ paper-icon-button:hover{
 
 #tile-content {
   display: flex;
+  flex: 1;
   overflow-y: hidden;
   min-height: 1px;
   height: 100%;

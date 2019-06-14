@@ -63,6 +63,11 @@ export class UxlTileView extends LitElement {
     onTileViewItemStatusChanged(e){
         let status : WidgetStatus = e.detail.status;
         let item = this.querySelector(`#${e.detail.tile}`);
+        let tileStatusChanged = new CustomEvent("tileItemStatusChanged", {
+          composed: true,
+          detail: { status: status, item: item }
+        });
+        this.dispatchEvent(tileStatusChanged);
         return status == "maximized" ? this.expand(item) : this.minimize(item);
     }
 
