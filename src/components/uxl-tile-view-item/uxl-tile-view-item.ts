@@ -29,12 +29,6 @@ export class UxlTileViewItem extends LitElement {
   itemId: string;
 
   @property()
-  iconMax: string = "tile-view-icons:maximize";
-
-  @property()
-  iconMin: string = "tile-view-icons:minimize";
-
-  @property()
   tileStatus: TileStatus = "normal";
 
   _maximize(e) {
