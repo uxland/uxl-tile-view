@@ -38,7 +38,7 @@ export class UxlTileView extends LitElement {
   iconTitle: string = "tile-view-icons:minimize";
 
   @property()
-  animationTime: number = 500;
+  animationTime: number = 300;
 
   @property()
   maximizedItem: any;
@@ -84,7 +84,7 @@ export class UxlTileView extends LitElement {
     this.isMaximized = true;
 
     setTimeout(() => {
-      animations.fadeInAnimation(this.querySelector(`#${element.id}`), this.animationTime);
+      animations.fadeInAnimation(this.querySelector(`#${element.id}`), this.animationTime * 2);
     }, this.animationTime);
   }
 
