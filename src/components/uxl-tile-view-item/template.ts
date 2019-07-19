@@ -13,13 +13,13 @@ export const template = (props: UxlTileViewItem) => html`
           @click="${props._maximize}"
           id="btn-max"
           data-args="${props.itemId}"
-          icon="${props.iconMax}"
+          icon="${(props as any).parentElement.iconMax}"
         ></paper-icon-button>
         <paper-icon-button
           @click="${props._minimize}"
           id="btn-min"
           data-args="${props.itemId}"
-          icon="${props.iconMin}"
+          icon="${(props as any).parentElement.iconMin}"
         ></paper-icon-button>
       </div>
     </div>
