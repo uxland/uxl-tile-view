@@ -8,3 +8,4 @@ webpack.config.js
 service-worker.js
 tsconfig.build.json
 .idea
+wdio.conf.js
