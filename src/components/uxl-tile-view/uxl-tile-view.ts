@@ -63,7 +63,7 @@ export class UxlTileView extends LitElement {
 
   async expand(element: any) {
     Array.from(this.items).forEach(tile => {
-      animations.fadeOutAnimation(this.querySelector(`#${tile.id}`), this.animationTime);
+      animations.fadeOutAnimation(this.querySelector(`#${tile.id}`), this.animationTime / 3);
     });
 
     await delay(this.animationTime);
