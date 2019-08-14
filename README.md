@@ -31,6 +31,11 @@ The component switch into maximized and normal slots automatically when the item
 
 We have 2 scenarios: passing a `title` or `maximizedTitle`, or passing `header` or `maximizedHeader`
 
+##### Disable animations
+
+If want to disable animations for all component, just pass `disableAnimations` attribute when you invoke them
+
+
 #### Properties
 
 | Attribute       | Description | Default                                                                             |

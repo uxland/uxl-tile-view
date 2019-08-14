@@ -27,6 +27,13 @@ export class UxlTileView extends LitElement {
     `;
   }
 
+  connectedCallback(){
+    super.connectedCallback();
+    if(this.hasAttribute('disableAnimations')){
+      this.disableAnimations = true;
+    }
+  }
+
   @property()
   iconMax: string = 'tile-view-icons:maximize';
 
@@ -45,6 +52,9 @@ export class UxlTileView extends LitElement {
   @property()
   isMaximized: boolean = false;
 
+  @property()
+  disableAnimations = false;
+
   @listen('tileViewItemStatusChanged', 'uxl-tile-view-item')
   onTileViewItemStatusChanged(e) {
     let status: WidgetStatus = e.detail.status;
@@ -62,11 +72,13 @@ export class UxlTileView extends LitElement {
   }
 
   async expand(element: any) {
-    Array.from(this.items).forEach(tile => {
-      animations.fadeOutAnimation(this.querySelector(`#${tile.id}`), this.animationTime / 3);
-    });
+    if (!this.disableAnimations) {
+      Array.from(this.items).forEach(tile => {
+        animations.fadeOutAnimation(this.querySelector(`#${tile.id}`), this.animationTime / 3);
+      });
 
-    await delay(this.animationTime);
+      await delay(this.animationTime);
+    }
 
     let items = Array.from(this.items);
     let otherItems = items.filter(item => item.id != element.id);
@@ -82,20 +94,26 @@ export class UxlTileView extends LitElement {
     this.classList.add('some-maximized');
     this.isMaximized = true;
 
-    setTimeout(() => {
-      animations.fadeInAnimation(this.querySelector(`#${element.id}`), this.animationTime * 2);
-    }, this.animationTime);
+    if (!this.disableAnimations) {
+      setTimeout(() => {
+        animations.fadeInAnimation(this.querySelector(`#${element.id}`), this.animationTime * 2);
+      }, this.animationTime);
+    }
   }
 
   minimize(element: any) {
-    animations.fadeOutAnimation(this.querySelector(`#${element.id}`), this.animationTime);
+    if (!this.disableAnimations) {
+      animations.fadeOutAnimation(this.querySelector(`#${element.id}`), this.animationTime);
+    }
     element.classList.remove('maximized');
     this.classList.remove('some-maximized');
     this.classList.add('none-maximized');
     Array.from(this.items).forEach(tile => {
       (<any>tile).tileStatus = 'normal';
       tile.classList.remove('minimized');
-      animations.fadeInAnimation(this.querySelector(`#${tile.id}`), this.animationTime);
+      if (!this.disableAnimations) {
+        animations.fadeInAnimation(this.querySelector(`#${tile.id}`), this.animationTime);
+      }
     });
     this.setItemMaximized(null);
     this.isMaximized = false;

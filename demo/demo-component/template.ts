@@ -1,10 +1,10 @@
-import { html } from "lit-element";
-import "src/components/uxl-tile-view/uxl-tile-view";
-import "src/components/uxl-tile-view-item/uxl-tile-view-item";
+import { html } from 'lit-element';
+import 'src/components/uxl-tile-view/uxl-tile-view';
+import 'src/components/uxl-tile-view-item/uxl-tile-view-item';
 
 export const template = () => html`
-  <h3>Demo Flex Dislay</h3>
-  <uxl-tile-view id="flex-tile" attrForSelected="name" iconMax="tile-view-icons:minimize">
+  <h3>Demo Flex Display</h3>
+  <uxl-tile-view id="flex-tile" attrForSelected="name" iconMax="tile-view-icons:minimize" disableAnimations>
     <uxl-tile-view-item name="view1" id="div0" itemId="div0" iconMax="tile-view-icons:maximize">
       <div slot="header">
         <h3>I'm a header view1</h3>
