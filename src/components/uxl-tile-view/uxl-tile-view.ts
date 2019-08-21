@@ -1,7 +1,7 @@
 import { html, LitElement, unsafeCSS, css, property, customElement } from 'lit-element';
 import styles from './styles.scss';
 import { template } from './template';
-import * as animations from '../../utilities/animations';
+// import * as animations from '../../utilities/animations';
 import { WidgetStatus, delay } from '../../utilities/common';
 import { listen } from '@uxland/uxl-utilities';
 import { UxlTileViewItem } from '../uxl-tile-view-item/uxl-tile-view-item';
@@ -27,9 +27,9 @@ export class UxlTileView extends LitElement {
     `;
   }
 
-  connectedCallback(){
+  connectedCallback() {
     super.connectedCallback();
-    if(this.hasAttribute('disableAnimations')){
+    if (this.hasAttribute('disableAnimations')) {
       this.disableAnimations = true;
     }
   }
@@ -74,7 +74,10 @@ export class UxlTileView extends LitElement {
   async expand(element: any) {
     if (!this.disableAnimations) {
       Array.from(this.items).forEach(tile => {
-        animations.fadeOutAnimation(this.querySelector(`#${tile.id}`), this.animationTime / 3);
+        (this as any).querySelector(`#${tile.id}`).classList.remove('fade-in');
+        (this as any).querySelector(`#${tile.id}`).classList.add('fade-out');
+        // (this as any).querySelector(`#${tile.id}`).style.animation = `fadeOut ${this.animationTime}ms ease-in-out`;
+        // animations.fadeOutAnimation(this.querySelector(`#${tile.id}`), this.animationTime / 3);
       });
 
       await delay(this.animationTime);
@@ -96,14 +99,20 @@ export class UxlTileView extends LitElement {
 
     if (!this.disableAnimations) {
       setTimeout(() => {
-        animations.fadeInAnimation(this.querySelector(`#${element.id}`), this.animationTime * 2);
+        (this as any).querySelector(`#${element.id}`).classList.remove('fade-out');
+        (this as any).querySelector(`#${element.id}`).classList.add('fade-in');
+        // (this as any).querySelector(`#${element.id}`).style.animation = `fadeIn ${this.animationTime * 2}ms ease-in-out;`;
+        // animations.fadeInAnimation(this.querySelector(`#${element.id}`), this.animationTime * 2);
       }, this.animationTime);
     }
   }
 
   minimize(element: any) {
     if (!this.disableAnimations) {
-      animations.fadeOutAnimation(this.querySelector(`#${element.id}`), this.animationTime);
+      (this as any).querySelector(`#${element.id}`).classList.remove('fade-in');
+      (this as any).querySelector(`#${element.id}`).classList.add('fade-out');
+      // (this as any).querySelector(`#${element.id}`).style.animation = `fadeOut ${this.animationTime}ms ease`;
+      // animations.fadeOutAnimation(this.querySelector(`#${element.id}`), this.animationTime);
     }
     element.classList.remove('maximized');
     this.classList.remove('some-maximized');
@@ -112,7 +121,10 @@ export class UxlTileView extends LitElement {
       (<any>tile).tileStatus = 'normal';
       tile.classList.remove('minimized');
       if (!this.disableAnimations) {
-        animations.fadeInAnimation(this.querySelector(`#${tile.id}`), this.animationTime);
+        (this as any).querySelector(`#${tile.id}`).classList.remove('fade-out');
+        (this as any).querySelector(`#${tile.id}`).classList.add('fade-in');
+        // animations.fadeInAnimation(this.querySelector(`#${tile.id}`), this.animationTime);
+        // (this as any).querySelector(`#${tile.id}`).style.animation = `fadeIn ${this.animationTime}ms ease-in-out;`;
       }
     });
     this.setItemMaximized(null);

@@ -1,7 +1,8 @@
-@import "@uxland/uxl-style-utilities/src/flex-layout-styles.scss";
-@import "@uxland/uxl-style-utilities/src/uxl-units-styles.scss";
+@import '@uxland/uxl-style-utilities/src/flex-layout-styles.scss';
+@import '@uxland/uxl-style-utilities/src/uxl-units-styles.scss';
 
-:host, :host(.none-maximized) {
+:host,
+:host(.none-maximized) {
   display: var(--uxl-tile-view-display, #{flex});
   flex-wrap: wrap;
   background-color: var(--uxl-tile-view-background-color, white);
