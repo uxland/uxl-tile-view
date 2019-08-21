@@ -1,4 +1,4 @@
-export const fadeOutAnimation = (element, duration) =>{
+/* export const fadeOutAnimation = (element, duration) =>{
     let animation = element.animate([
             {opacity: 1, easing: 'ease-out'},
             {opacity: 0.5},
@@ -51,4 +51,4 @@ export const stretchLeftAnimation = (element, duration)=>{
             {transform: 'scaleX(1)', offset: 1}],
         {duration: duration, fill: 'forwards', easing: 'ease-out'});
     return animation;
-};
+}; */
